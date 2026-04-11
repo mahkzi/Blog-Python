@@ -1,3 +1,3 @@
-# VERTEX Platform - Hardware E-Commerce 🖥️
+# Platform - Hardware E-Commerce 🖥️
 
-VERTEX es una plataforma de gestión y venta de hardware desarrollada con **Django**
+Esta es una plataforma de gestión y venta de hardware desarrollada con **Django**
