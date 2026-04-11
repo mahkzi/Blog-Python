@@ -2,4 +2,9 @@
 {% block title_header %}crear productos{% endblock title_header %}
 {% block content %}
 <h1>Estas en crear productos</h1>
+<form action= {% url "Publicaciones:crear_productos" %} method="post">
+    {% csrf_token %}
+    {{formulario}}
+    <input type="submit" value="Crear">
+</form>
 {% endblock content %}

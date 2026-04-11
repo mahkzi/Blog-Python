@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title_header %}detalle{% endblock title_header %}
+{% block content %}
+<h1>Estas en el detalle</h1>
+{% if producto %}
+    <ul>
+        <li>
+            <h3>{{ producto.nombre }}</h3>
+            <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+            <p><strong>Descripción:</strong> {{ producto.descripcion }}</p>
+            <p><small>Creado el: {{ producto.fecha_creacion }}</small></p>
+        </li>
+    </ul>
+    
+    <a href="{% url 'Publicaciones:mostrar_productos' %}">Volver a la lista</a>
+{% else %}
+    <p>El producto no existe.</p>
+{% endif %}
+{% endblock content %}

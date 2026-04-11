@@ -2,4 +2,22 @@
 {% block title_header %}mostrar productos{% endblock title_header %}
 {% block content %}
 <h1>Estas en mostrar productos</h1>
+
+<form action={% url "Publicaciones:mostrar_productos" %} method="get">
+    {{formulario}}
+    <input type="submit"value="Buscar">
+</form>
+{% if productos %}
+<ul>
+    {% for producto in productos %}
+    <li>
+        <h3>{{producto.nombre}}</h3>
+        <p>{{producto.precio}}</p>
+        <p>{{producto.descripcion}}</p>
+        <a href={% url "Publicaciones:detalle_producto" producto.id %}>Ver detalle</a>
+        <a href="">Eliminar</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
 {% endblock content %}
